@@ -9,17 +9,26 @@
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            /* RUTA DE LA IMAGEN DE FONDO */
+            /* IMAGEN DE FONDO - ESTO NO CAMBIA */
             background: url('assets/fondo-ciberseguridad.jpg') no-repeat center center fixed;
             background-size: cover;
-            /* COLOR DE TEXTO DE PRUEBA (AMARILLO) para el header y footer */
-            color: yellow; 
+            /* Color de texto base (blanco para header y footer por defecto) */
+            color: white; 
             line-height: 1.6;
         }
+
+        /* ESTILO PARA EL NUEVO CONTENEDOR PRINCIPAL */
+        main {
+            position: relative; /* Esencial para que z-index funcione */
+            z-index: 1; /* Asegura que esté por encima del fondo */
+            /* El ancho y margen son opcionales, pero pueden ayudar a centrarlo */
+            max-width: 100%; /* Ocupa el 100% del ancho del body */
+            margin: 0 auto;
+        }
+
         header {
-            /* Encabezado semi-transparente */
             background: rgba(10, 61, 98, 0.9); 
-            color: white; /* Sobreescribe el amarillo del body para el texto del header */
+            color: white; 
             padding: 3rem 2rem;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -39,6 +48,71 @@
             padding: 2.5rem;
             max-width: 900px;
             margin: 2rem auto;
-            /* Fondo blanco semi-transparente para la legibilidad */
+            /* Fondo blanco semi-transparente para legibilidad */
             background: rgba(255, 255, 255, 0.95); 
             border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            /* Color de texto dentro de las secciones */
+            color: #333; 
+        }
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+        h2 {
+            color: #0a3d62;
+            font-size: 2em;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #1a5c8a;
+            padding-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #f9f9f9;
+            margin-bottom: 0.8rem;
+            padding: 1rem 1.5rem;
+            border-left: 5px solid #1a5c8a;
+            border-radius: 8px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        ul li:hover {
+            background: #e6f7ff;
+            transform: translateX(5px);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #ccc; 
+            font-size: 0.9em;
+            margin-top: 3rem;
+            background: transparent;
+        }
+        a {
+            color: #1a5c8a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #0a3d62;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <header>
+            <h1>Carlos Villalba</h1>
+            <p>Especialista en Infraestructura, Redes y Seguridad TI</p>
+        </header>
+
+        <section>
+            <h2>Sobre mí</h2>
+            <p>
+                Profesional en infraestructura TI con experiencia en redes, administración de sistemas,
+                seguridad operativa, cloud y soporte avanzado. Certificado en Azure AZ-9
