@@ -9,18 +9,21 @@
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            /* Fondo degradado limpio y suave */
-            background: linear-gradient(135deg, #e0f2f7 0%, #c2e0f0 100%); 
+            /* --- FONDO DE IMAGEN APLICADO --- */
+            background: url('assets/fondo-ciberseguridad.jpg') no-repeat center center fixed;
+            background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
             color: #333;
             line-height: 1.6;
         }
         header {
-            /* Degradado azul oscuro para el encabezado */
-            background: linear-gradient(90deg, #0a3d62 0%, #1a5c8a 100%); 
+            /* Encabezado semi-transparente para que se vea un poco el fondo */
+            background: rgba(10, 61, 98, 0.9); 
             color: white;
             padding: 3rem 2rem;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
         }
         header h1 {
             font-size: 3em;
@@ -35,8 +38,8 @@
             padding: 2.5rem;
             max-width: 900px;
             margin: 2rem auto;
-            /* Fondo blanco sólido con sombra */
-            background: white;
+            /* Fondo blanco semi-transparente para la legibilidad */
+            background: rgba(255, 255, 255, 0.95); 
             border-radius: 20px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -72,9 +75,10 @@
         footer {
             text-align: center;
             padding: 2rem;
-            color: #777;
+            color: #ccc; /* Color más claro para que contraste con el fondo oscuro */
             font-size: 0.9em;
             margin-top: 3rem;
+            /* Fondo transparente para que se vea el fondo de la página */
             background: transparent;
         }
         a {
